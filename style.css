@@ -175,29 +175,44 @@ div img {
 
 
 /* TODOS OS BOTÕES DO SITE */
+/*.camisetaPreta {
+    display: none;
+}
+.camisetaPreta.open {
+    display: block;
+}
+
+.camisetaVermelha {
+    display: none;
+}
+
+.camisetaVermelha.open {
+    display: block;
+}
+*/
+
 .botaoDeTrocaDeCor {
     display: flex;
     justify-content: end;
     gap: 0.5rem;
     margin: 0.7rem;
-
 }
+
 .botaoParaMudarParaCorPreta {
-    background-color: black;
+    background: linear-gradient(45deg, #000000 50%,#be1502 52%,#ff1a00 55%,#ff1a00 64%,#ff1a00 100%);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 5rem;
     border: none;
     gap: 0.5rem;
-}
-.botaoParaMudarParaCorVermelha {
-    background-color: #CB0C21;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 5rem;
-    border: none;
+
+    transition: transform 0.3s;
 }
 
+.botaoParaMudarParaCorPreta:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
 .botaoComprarCarrinho {
     display: flex;
     justify-content: center;

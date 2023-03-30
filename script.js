@@ -6,6 +6,8 @@ const caixaDeVendasComAsCamisetasEBotoes = document.querySelector(".caixaComAsCa
 const botaoPretoEVermelhoQueMudaACorDaCamiseta = document.querySelector(".botaoDeTrocaDeCor")
 const botaoPreto = document.querySelector(".botaoParaMudarParaCorPreta")
 const botaoVermelho = document.querySelector(".botaoParaMudarParaCorVermelha")
+const camisetaPretaParaVermelha = document.querySelector(".camisetaPreta")
+const camisetaVermelhaParaPreta = document.querySelector(".camisetaVermelha")
 
 const todoOModal = document.querySelector(".modalInteiro")
 const botaoDeFinalizar = document.querySelector(".finalizarCompra")
@@ -32,4 +34,20 @@ botaoDeVoltar.onclick = event => {
     event.preventDefault()
 
     todoOModal.classList.remove('open')
+    carrinhoAberto.toggleAttribute('hidden')
+    carrinhoMinimizado.toggleAttribute('hidden')
 }
+
+botaoPreto.addEventListener('click', function() {
+    camisetaPretaParaVermelha.toggleAttribute('hidden')
+    camisetaVermelhaParaPreta.toggleAttribute('hidden')
+})
+
+/*
+botaoPreto.onclick = event => {
+    event.preventDefault
+
+    camisetaPretaParaVermelha.classList.remove('open')
+    camisetaVermelhaParaPreta.classList.add('open')
+}
+*/
