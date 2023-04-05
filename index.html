@@ -59,100 +59,7 @@
         <legend>CAMISETAS EXCLUSIVAS</legend>
 
         <!-- PRIMEIRA ÁREA DE COMPRAS -->
-        <ul class="primeiraAreaDeCompras">
-            <li>
-                <div class="botaoDeTrocaDeCor"> 
-                    <button class="botaoParaMudarParaCorPreta"></button>
-                </div>  
-                <div class="caixaComAsCamisasDentro">
-                    <img class="camisetaPreta" src="img/camisetapreta.png" alt="Camiseta Preta" />
-                    <img hidden class="camisetaVermelha" src="img/camisetavermelha.png" alt="Camiseta Vermelha" />
-                    <label for="">Camiseta Básica</label>
-                    <label for="">R$10,00</label>
-                </div>
-                <div class="botaoComprarCarrinho">
-                    <button class="botaoCompraOuCarrinho">Comprar</button>
-                    <button class="botaoCompraOuCarrinho">+ Carrinho</button>  
-            </li> 
-
-            <li>
-                <div class="botaoDeTrocaDeCor"> 
-                    <button class="botaoParaMudarParaCorPreta"></button>
-                </div>  
-                <div class="caixaComAsCamisasDentro">
-                    <img class="camisetaPreta" src="img/camisetapreta.png" alt="Camiseta Preta" />
-                    <img hidden class="camisetaVermelha" src="img/camisetavermelha.png" alt="Camiseta Vermelha" />
-                    <label for="">Camiseta Básica</label>
-                    <label for="">R$10,00</label>
-                </div>
-                <div class="botaoComprarCarrinho">
-                    <button class="botaoCompraOuCarrinho">Comprar</button>
-                    <button class="botaoCompraOuCarrinho">+ Carrinho</button>  
-            </li>
-
-            <li>
-                <div class="botaoDeTrocaDeCor"> 
-                    <button class="botaoParaMudarParaCorPreta"></button>
-                </div>  
-                <div class="caixaComAsCamisasDentro">
-                    <img class="camisetaPreta" src="img/camisetapreta.png" alt="Camiseta Preta" />
-                    <img hidden class="camisetaVermelha" src="img/camisetavermelha.png" alt="Camiseta Vermelha" />
-                    <label for="">Camiseta Básica</label>
-                    <label for="">R$10,00</label>
-                </div>
-                <div class="botaoComprarCarrinho">
-                    <button class="botaoCompraOuCarrinho">Comprar</button>
-                    <button class="botaoCompraOuCarrinho">+ Carrinho</button>  
-            </li> 
-        </ul>
-
-        <!-- LEGENDA -->
-        <legend>OFERTAS</legend>
-
-        <!-- SEGUNDA ÁREA DE COMPRAS DO SITE -->
-        <ul class="segundaAreaDeCompras">
-            <li>
-                <div class="imagemDePromocao"> 
-                    <img class="imgPromocao" src="/img/promoção.png" alt="promoção">
-                </div> 
-                <div class="caixaComAsCamisasDentro">
-                    <img src="img/camisetapreta.png" alt="Camiseta Preta" />
-                    <label for="">Camiseta Básica</label>
-                    <label for="">R$ 9,99</label>
-                </div>
-                <div class="botaoComprarCarrinho">
-                    <button class="botaoCompraOuCarrinho">Comprar</button>
-                    <button class="botaoCompraOuCarrinho">+ Carrinho</button> 
-            </li> 
-            <li>
-                <div class="imagemDePromocao"> 
-                    <img class="imgPromocao" src="/img/promoção.png" alt="promoção">
-                </div> 
-                <div class="caixaComAsCamisasDentro">
-                    <img src="img/camisetapreta.png" alt="Camiseta Preta" />
-                    <label for="">Camiseta Básica</label>
-                    <label for="">R$ 9,99</label>
-                </div>
-                <div class="botaoComprarCarrinho">
-                    <button class="botaoCompraOuCarrinho">Comprar</button>
-                    <button class="botaoCompraOuCarrinho">+ Carrinho</button>
-                </div>   
-            </li>
-            <li>
-                <div class="imagemDePromocao"> 
-                    <img class="imgPromocao" src="/img/promoção.png" alt="promoção">
-                </div>  
-                <div class="caixaComAsCamisasDentro">
-                    <img src="img/camisetapreta.png" alt="Camiseta Preta" />
-                    <label for="">Camiseta Básica</label>
-                    <label for="">R$ 9,99</label>
-                </div>
-                <div class="botaoComprarCarrinho">
-                    <button class="botaoCompraOuCarrinho">Comprar</button>
-                    <button class="botaoCompraOuCarrinho">+ Carrinho</button>
-                </div>     
-            </li>
-        </ul>
+        <ul id="primeiraAreaDeCompras"></ul>
 
         <!-- RODAPÉ DA LOJA -->
         <footer>
@@ -187,17 +94,20 @@
     </main>
 
     <!-- CARRINHO DE COMPRA FIXO NA TELA -->
-    <button  class="carrinhoDeCompraMinimizado">Carrinho de Compra</button>
+    <button class="carrinhoDeCompraMinimizado">Carrinho de Compra</button>
 
     <!-- ABA DO CARRINHO ABERTA E COM BOTÃO DE FINALIZAR COMPRA -->
-    <div hidden class="abaFixaDoCarrinhoDeCompra">
-        <label for="tituloDaAbaCarrinho">Carrinho de Compras</label>
-        <button class="fecharCarrinho">X</button>
-        <label for="objetosComprados">Objetos Comprados:</label>
-        <label for="valorTotal">Total:</label>
-        <button class="finalizarCompra">FINALIZAR COMPRA</button>
+    <div class="abaFixaDoCarrinhoDeCompra hidden">
+        <div class="filhoDoAbaFixa">
+            <label for="tituloDaAbaCarrinho">Carrinho de Compras</label>
+            <button class="fecharCarrinho">X</button>
+            <label class="objetosComprados" for="objetosComprados">Objetos Comprados:</label>
+            <ul class="listaDoCarrinho">
+                
+            </ul>
+            <button class="finalizarCompra">FINALIZAR COMPRA</button>
+        </div>
     </div>
-
 
     <div class="alertaDeErroDeCompra">
         Carrinho está vazio!

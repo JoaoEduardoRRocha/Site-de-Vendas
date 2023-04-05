@@ -120,12 +120,12 @@ legend {
     margin-top: 2rem;
 }
 
-.primeiraAreaDeCompras {
+#primeiraAreaDeCompras {
     display: flex;
     gap: 1rem;
 }
 
-.primeiraAreaDeCompras li {
+#primeiraAreaDeCompras li {
     background-color: white;
     border: solid rgb(148, 147, 147) 0.1rem;
     margin-top: 1.5rem;
@@ -133,12 +133,16 @@ legend {
     flex-grow: 1;
 }
 
-.segundaAreaDeCompras {
+#primeiraAreaDeCompras li img.hidden {
+    display: none;
+}
+
+#segundaAreaDeCompras {
     display: flex;
     gap: 1rem;
 }
 
-.segundaAreaDeCompras li {
+#segundaAreaDeCompras li {
     background-color: white;
     border: solid rgb(148, 147, 147) 0.1rem;
     margin-top: 1.5rem;
@@ -173,31 +177,6 @@ div img {
     height: 3rem;
 }
 
-
-/* TODOS OS BOTÕES DO SITE */
-/*.camisetaPreta {
-    display: none;
-}
-.camisetaPreta.open {
-    display: block;
-}
-
-.camisetaVermelha {
-    display: none;
-}
-
-.camisetaVermelha.open {
-    display: block;
-}
-*/
-
-.botaoDeTrocaDeCor {
-    display: flex;
-    justify-content: end;
-    gap: 0.5rem;
-    margin: 0.7rem;
-}
-
 .botaoParaMudarParaCorPreta {
     background: linear-gradient(45deg, #000000 50%,#be1502 52%,#ff1a00 55%,#ff1a00 64%,#ff1a00 100%);
     width: 2.5rem;
@@ -205,7 +184,7 @@ div img {
     border-radius: 5rem;
     border: none;
     gap: 0.5rem;
-
+    margin: 0.7rem;
     transition: transform 0.3s;
 }
 
@@ -224,6 +203,7 @@ div img {
 
 /* CARRINHO FIXO NA TELA */
 .carrinhoDeCompraMinimizado {
+    display: block;
     position: fixed;
     max-width: 10rem;
     max-height: 10rem;
@@ -233,18 +213,40 @@ div img {
     right: 0.3rem;
 }
 
+.carrinhoDeCompraMinimizado.hidden {
+    display: none;
+}
+
 .abaFixaDoCarrinhoDeCompra {
     border: solid rgb(148, 147, 147) 0.1rem;
     border-radius: 1rem;
     background-color: white;
     
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
     position: fixed;
     max-width: 40rem;
-    max-height: 40rem;
+    max-height: 41rem;
     width: 100%;
     height: 100%;
     bottom: 0.3rem;
     right: 0.3rem;
+}
+
+.abaFixaDoCarrinhoDeCompra.hidden {
+    display: none;
+}
+
+.abaFixaDoCarrinhoDeCompra .filhoDoAbaFixa {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    height: 100%;
+
+    position: relative;
 }
 
 .fecharCarrinho {
@@ -252,7 +254,39 @@ div img {
     height: 2.5rem;
     position: absolute;
     right: 0;
-    margin: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+.objetosComprados {
+    margin-top: 1rem;
+}
+
+.listaDoCarrinho {
+    overflow-y: scroll;
+    margin-bottom: 5rem;
+    padding: 1rem 0;
+}
+
+.objetoNoCarrinho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border: solid 0.1rem rgb(124, 124, 124);
+}
+
+.removerItem {
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.removerItem:hover {
+    height: 3rem;
+    background-color: #e45959;
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .finalizarCompra {
@@ -341,7 +375,7 @@ div li p{
 
 h2 {
     font-size: 4.5rem;
-    color: #4b4b4b;
+    color: #2c2c2c;
 }
 
 .tituloDoModal {
@@ -359,7 +393,7 @@ div div img {
     font-size: 2rem;
     padding: 1rem;
     border: none;
-    background-color: #303030;
+    background-color: #202020;
     border-radius: 1rem;
     color: white;
 
@@ -367,8 +401,9 @@ div div img {
 }
 
 .fecharModalEVoltarAoInicio:hover {
-    background-color: #a5a5a5;
+    background-color: white;
     color: black;
+    border: black 1px solid;
 
     cursor: pointer;
     transform: scale(1.2)
@@ -402,4 +437,21 @@ div div img {
 
     transform: translateY(-30px);
     transition: transform .5s;
+}
+
+/* setando atributos para fazer o botão de camiseta preta / camiseta vermelha */
+.camisetaP {
+    display: block;
+}
+
+.camisetaV {
+    display: none;
+}
+
+.camisetaP.hidden {
+    display: none;
+}
+
+.camisetaV.open {
+    display: block;
 }
