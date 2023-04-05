@@ -137,20 +137,6 @@ legend {
     display: none;
 }
 
-#segundaAreaDeCompras {
-    display: flex;
-    gap: 1rem;
-}
-
-#segundaAreaDeCompras li {
-    background-color: white;
-    border: solid rgb(148, 147, 147) 0.1rem;
-    margin-top: 1.5rem;
-
-    flex-grow: 1;
-}
-
-
 .caixaComAsCamisasDentro {
     display: flex;
     flex-direction: column;
@@ -165,18 +151,6 @@ div img {
 }
 
 /* IMAGEM DA PROMOÇÃO DA SEGUNDA PARTE DE VENDAS */
-.imagemDePromocao  {
-    display: flex;
-    justify-content: end;
-    gap: 0.5rem;
-    margin: 0.7rem;
-}
-
-.imgPromocao {
-    width: 12rem;
-    height: 3rem;
-}
-
 .botaoParaMudarParaCorPreta {
     background: linear-gradient(45deg, #000000 50%,#be1502 52%,#ff1a00 55%,#ff1a00 64%,#ff1a00 100%);
     width: 2.5rem;
@@ -407,51 +381,4 @@ div div img {
 
     cursor: pointer;
     transform: scale(1.2)
-}
-
-/* ALERTA PARA QUANDO CARRINHO ESTIVER VAZIO */
-.alertaDeErroDeCompra.open {
-    visibility: visible;
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-.alertaDeErroDeCompra {
-    position: absolute;
-    background-color: #ee3b3b;
-    color: white;
-
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    
-    padding: 0.3rem 0;
-
-    visibility: 0;
-    opacity: 0;
-
-    transform: translateY(-30px);
-    transition: transform .5s;
-}
-
-/* setando atributos para fazer o botão de camiseta preta / camiseta vermelha */
-.camisetaP {
-    display: block;
-}
-
-.camisetaV {
-    display: none;
-}
-
-.camisetaP.hidden {
-    display: none;
-}
-
-.camisetaV.open {
-    display: block;
 }
